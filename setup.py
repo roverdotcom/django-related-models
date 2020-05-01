@@ -24,7 +24,7 @@ def read(*names, **kwargs):
 
 setup(
     name='django-related-models',
-    version='0.1.0',
+    version='0.1.1',
     license='BSD 3-Clause License',
     description=(
         'A library designed such that, when provided with a model instance it will return a '
@@ -53,10 +53,14 @@ setup(
         'Framework :: Django',
         'Framework :: Django :: 1.11',
         'Framework :: Django :: 2.0',
+        'Framework :: Django :: 2.1',
+        'Framework :: Django :: 2.2',
+        'Framework :: Django :: 3.0',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
         'Topic :: Utilities',
     ],
     keywords=[
