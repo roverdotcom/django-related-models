@@ -1,3 +1,4 @@
+dist: xenial
 language: python
 sudo: false
 cache: pip
@@ -13,15 +14,6 @@ matrix:
     - python: '2.7'
       env:
         - TOXENV=2.7-1.11-cover,report,codecov
-    - python: '3.5'
-      env:
-        - TOXENV=3.5-1.11-cover,report,codecov
-    - python: '3.5'
-      env:
-        - TOXENV=3.5-2.0-cover,report,codecov
-    - python: '3.5'
-      env:
-        - TOXENV=3.5-2.1-cover,report,codecov
     - python: '3.6'
       env:
         - TOXENV=3.6-1.11-cover,report,codecov
@@ -31,6 +23,42 @@ matrix:
     - python: '3.6'
       env:
         - TOXENV=3.6-2.1-cover,report,codecov
+    - python: '3.6'
+      env:
+        - TOXENV=3.6-2.2-cover,report,codecov
+    - python: '3.6'
+      env:
+        - TOXENV=3.6-3.0-cover,report,codecov
+    - python: '3.7'
+      env:
+        - TOXENV=3.7-1.11-cover,report,codecov
+    - python: '3.7'
+      env:
+        - TOXENV=3.7-2.0-cover,report,codecov
+    - python: '3.7'
+      env:
+        - TOXENV=3.7-2.1-cover,report,codecov
+    - python: '3.7'
+      env:
+        - TOXENV=3.7-2.2-cover,report,codecov
+    - python: '3.7'
+      env:
+        - TOXENV=3.7-3.0-cover,report,codecov
+    - python: '3.8'
+      env:
+        - TOXENV=3.8-1.11-cover,report,codecov
+    - python: '3.8'
+      env:
+        - TOXENV=3.8-2.0-cover,report,codecov
+    - python: '3.8'
+      env:
+        - TOXENV=3.8-2.1-cover,report,codecov
+    - python: '3.8'
+      env:
+        - TOXENV=3.8-2.2-cover,report,codecov
+    - python: '3.8'
+      env:
+        - TOXENV=3.8-3.0-cover,report,codecov
 before_install:
   - python --version
   - uname -a
