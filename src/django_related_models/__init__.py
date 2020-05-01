@@ -24,6 +24,6 @@ __all__ = [
     'RelatedModels',
 ]
 
+from .related_models import RelatedModels
 from .related_models import get_related_objects
 from .related_models import get_related_objects_mapping
-from .related_models import RelatedModels
