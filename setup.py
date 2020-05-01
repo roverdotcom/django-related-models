@@ -24,7 +24,7 @@ def read(*names, **kwargs):
 
 setup(
     name='django-related-models',
-    version='0.1.0',
+    version='0.1.1',
     license='BSD 3-Clause License',
     description=(
         'A library designed such that, when provided with a model instance it will return a '
