@@ -11,54 +11,39 @@ env:
     - TOXENV=docs
 matrix:
   include:
-    - python: '2.7'
+    - python: '3.10'
       env:
-        - TOXENV=2.7-1.11-cover,report,codecov
-    - python: '3.6'
+        - TOXENV=3.10-2.2-cover,report,codecov
+    - python: '3.10'
       env:
-        - TOXENV=3.6-1.11-cover,report,codecov
-    - python: '3.6'
+        - TOXENV=3.10-3.2-cover,report,codecov
+    - python: '3.10'
       env:
-        - TOXENV=3.6-2.0-cover,report,codecov
-    - python: '3.6'
-      env:
-        - TOXENV=3.6-2.1-cover,report,codecov
-    - python: '3.6'
-      env:
-        - TOXENV=3.6-2.2-cover,report,codecov
-    - python: '3.6'
-      env:
-        - TOXENV=3.6-3.0-cover,report,codecov
-    - python: '3.7'
-      env:
-        - TOXENV=3.7-1.11-cover,report,codecov
-    - python: '3.7'
-      env:
-        - TOXENV=3.7-2.0-cover,report,codecov
-    - python: '3.7'
-      env:
-        - TOXENV=3.7-2.1-cover,report,codecov
+        - TOXENV=3.10-4.0-cover,report,codecov
     - python: '3.7'
       env:
         - TOXENV=3.7-2.2-cover,report,codecov
     - python: '3.7'
       env:
-        - TOXENV=3.7-3.0-cover,report,codecov
-    - python: '3.8'
-      env:
-        - TOXENV=3.8-1.11-cover,report,codecov
-    - python: '3.8'
-      env:
-        - TOXENV=3.8-2.0-cover,report,codecov
-    - python: '3.8'
-      env:
-        - TOXENV=3.8-2.1-cover,report,codecov
+        - TOXENV=3.7-3.2-cover,report,codecov
     - python: '3.8'
       env:
         - TOXENV=3.8-2.2-cover,report,codecov
     - python: '3.8'
       env:
-        - TOXENV=3.8-3.0-cover,report,codecov
+        - TOXENV=3.8-3.2-cover,report,codecov
+    - python: '3.8'
+      env:
+        - TOXENV=3.8-4.0-cover,report,codecov
+    - python: '3.9'
+      env:
+        - TOXENV=3.9-2.2-cover,report,codecov
+    - python: '3.9'
+      env:
+        - TOXENV=3.9-3.2-cover,report,codecov
+    - python: '3.9'
+      env:
+        - TOXENV=3.9-4.0-cover,report,codecov
 before_install:
   - python --version
   - uname -a

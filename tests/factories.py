@@ -7,7 +7,7 @@ from tests.test_app_1.models import Pet
 from tests.test_app_2.models import TaggedItem
 
 
-class PersonFactory(factory.DjangoModelFactory):
+class PersonFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = Person
 
@@ -15,7 +15,7 @@ class PersonFactory(factory.DjangoModelFactory):
     last_name = factory.Sequence(lambda n: 'Ib\xe1\xf1ezNumber{}'.format(n))
 
 
-class PetFactory(factory.DjangoModelFactory):
+class PetFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = Pet
 
@@ -23,7 +23,7 @@ class PetFactory(factory.DjangoModelFactory):
     owner = factory.SubFactory(PersonFactory)
 
 
-class PersonLocationFactory(factory.DjangoModelFactory):
+class PersonLocationFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = PersonLocation
 
@@ -32,6 +32,6 @@ class PersonLocationFactory(factory.DjangoModelFactory):
     owner = factory.SubFactory(PersonFactory)
 
 
-class TaggedItemFactory(factory.DjangoModelFactory):
+class TaggedItemFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = TaggedItem
