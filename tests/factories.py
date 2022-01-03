@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
 import factory
+
 from tests.test_app_1.models import Person
 from tests.test_app_1.models import PersonLocation
 from tests.test_app_1.models import Pet
@@ -27,8 +28,8 @@ class PersonLocationFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = PersonLocation
 
-    address1 = factory.Sequence(lambda n: 'Middle of Nowhere.'.format(n))
-    address2 = factory.Sequence(lambda n: 'No number, obviously.'.format(n))
+    address1 = factory.Sequence(lambda n: 'Middle of Nowhere.')
+    address2 = factory.Sequence(lambda n: 'No number, obviously.')
     owner = factory.SubFactory(PersonFactory)
 
 

@@ -1,6 +1,11 @@
 import abc
 
 from django.test import TestCase
+
+from django_related_models.related_models import FieldPreimage
+from django_related_models.related_models import RelatedModels
+from django_related_models.related_models import get_related_objects
+from django_related_models.related_models import get_related_objects_mapping
 from tests.factories import PersonFactory
 from tests.factories import PersonLocationFactory
 from tests.factories import PetFactory
@@ -9,11 +14,6 @@ from tests.test_app_1.models import Person
 from tests.test_app_1.models import PersonLocation
 from tests.test_app_1.models import Pet
 from tests.test_app_2.models import TaggedItem
-
-from django_related_models.related_models import FieldPreimage
-from django_related_models.related_models import RelatedModels
-from django_related_models.related_models import get_related_objects
-from django_related_models.related_models import get_related_objects_mapping
 
 
 class GetRelatedObjectsMappingTests(TestCase):
