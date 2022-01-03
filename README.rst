@@ -10,7 +10,7 @@ Overview
     * - docs
       - |docs|
     * - tests
-      - | |travis|
+        | |github-tests|
         | |codecov|
     * - package
       - | |version| |wheel| |supported-versions| |supported-implementations|
@@ -20,10 +20,6 @@ Overview
 .. |docs| image:: https://readthedocs.org/projects/django-related-models/badge/?version=latest
     :target: https://django-related-models.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
-
-.. |travis| image:: https://travis-ci.org/roverdotcom/django-related-models.svg?branch=master
-    :alt: Travis-CI Build Status
-    :target: https://travis-ci.org/roverdotcom/django-related-models
 
 .. |codecov| image:: https://codecov.io/github/roverdotcom/django-related-models/coverage.svg?branch=master
     :alt: Coverage Status
@@ -49,6 +45,9 @@ Overview
     :alt: Supported implementations
     :target: https://pypi.python.org/pypi/django-related-models
 
+.. |github-tests| image:: https://github.com/roverdotcom/django-related-models/actions/workflows/build/badge.svg
+    :alt: GitHub build status
+    :target: https://github.com/roverdotcom/django-related-models/
 
 .. end-badges
 
