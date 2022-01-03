@@ -96,18 +96,19 @@ class FieldPreimageTestsMixin(object):
     def setUpTestData(cls):
         super(FieldPreimageTestsMixin, cls).setUpTestData()
         cls.instance = PersonFactory.create()
-        cls.field = cls.get_field()
-        cls.field_preimage = cls.get_field_preimage()
 
-    @classmethod
-    def get_field_preimage(cls, **kwargs):
+    def setUp(self):
+        super().setUp()
+        self.field = self.get_field()
+        self.field_preimage = self.get_field_preimage()
+
+    def get_field_preimage(self, **kwargs):
         kwargs = dict({
-            'target_model': type(cls.instance),
-            'field': cls.field,
+            'target_model': type(self.instance),
+            'field': self.field,
         }, **kwargs)
         return FieldPreimage(**kwargs)
 
-    @classmethod
     @abc.abstractmethod
     def get_field(cls):
         """
@@ -124,8 +125,7 @@ class FieldPreimageTests(FieldPreimageTestsMixin, TestCase):
         super(FieldPreimageTests, cls).setUpTestData()
         cls.pet = PetFactory.create(owner=cls.instance)
 
-    @classmethod
-    def get_field(cls):
+    def get_field(self):
         return Pet._meta.get_field('owner')
 
     def test_field(self):
@@ -161,8 +161,7 @@ class FieldPreimageGenericForeignKeyTests(FieldPreimageTestsMixin, TestCase):
             content_object=cls.instance
         )
 
-    @classmethod
-    def get_field(cls):
+    def get_field(self):
         return TaggedItem._meta.get_field('content_object')
 
     def test_field(self):
@@ -175,7 +174,7 @@ class FieldPreimageGenericForeignKeyTests(FieldPreimageTestsMixin, TestCase):
         self.assertEqual(self.field_preimage.model, TaggedItem)
 
     def test_generic_foreign_key(self):
-        self.assertEqual(self.field_preimage.generic_foreign_key, self.get_field())
+        self.assertEqual(self.field_preimage.generic_foreign_key, self.field)
 
     def test_get_related_objects(self):
         self.assertEqual(
