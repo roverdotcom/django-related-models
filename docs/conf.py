@@ -7,8 +7,9 @@ import sys
 import django
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'tests.settings'
-from django.conf import settings
-settings.configure()
+# from django.conf import settings
+# settings.configure()
+django.setup()
 
 extensions = [
     'sphinx.ext.autodoc',
@@ -29,7 +30,7 @@ if os.getenv('SPELLCHECK'):
 source_suffix = '.rst'
 master_doc = 'index'
 project = 'Django Related Models'
-year = '2018'
+year = '2022'
 author = 'Marius Mucenicu'
 copyright = '{0}, {1}'.format(year, author)
 version = release = '0.1.1'
